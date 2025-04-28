@@ -10,7 +10,7 @@ pipeline {
       stage('checkout') {
             steps {
                 echo 'Cloning GIT HUB Repo '
-				git branch: 'main', url: 'https://github.com/devopstraininghub/mindcircuit13.git'
+				git branch: 'main', url: 'https://github.com/sivakoppala/mindcircuit13.git'
             }  
         }
 		
@@ -54,7 +54,7 @@ pipeline {
             sh 'docker login -u devopshubg333 -p ${dockerhub}'
 			
 			 }
-			   sh 'docker push devopshubg333/batch13:${BUILD_NUMBER}'
+			   sh 'docker push sivakoppala/am:${BUILD_NUMBER}'
 			   
            
 				}
